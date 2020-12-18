@@ -1,5 +1,8 @@
 # Enigma-Game Enigma
 
+Homebrew formula for development testing the game Enigma on macOS
+Do not use this tap for released versions of Enigma, instead get Enigma from homebrew/core
+
 ## How do I install these formulae?
 `brew install enigma-game/enigma/<formula>`
 
