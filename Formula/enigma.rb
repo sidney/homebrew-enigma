@@ -1,8 +1,8 @@
 class Enigma < Formula
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
-  #url "https://github.com/sidney/Enigma/releases/download/test1.30-prealpha/enigma-test1.30-prealpha.tar.gz"
-  #sha256 "330ba77de4135e74d34f47dda3822a4dc9535d1cddc53797b524c18127193dfb"
+  url "https://github.com/Enigma-Game/Enigma/releases/download/1.30-alpha/enigma-1.30-alpha.tar.gz"
+  sha256 "2605530d952299c193113e98058db4f65efe9e4ceeef93531934ea84317df337"
   license "GPL-2.0-or-later"
   revision 4
 
