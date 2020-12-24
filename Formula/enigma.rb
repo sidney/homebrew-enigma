@@ -4,7 +4,6 @@ class Enigma < Formula
   url "https://github.com/Enigma-Game/Enigma/releases/download/1.30-alpha/enigma-1.30-alpha.tar.gz"
   sha256 "2605530d952299c193113e98058db4f65efe9e4ceeef93531934ea84317df337"
   license "GPL-2.0-or-later"
-  revision 4
 
   livecheck do
     url :stable
@@ -35,9 +34,7 @@ class Enigma < Formula
     ENV.cxx11
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-libintl-prefix=#{Formula["gettext"].opt_prefix}",
-                          "--with-system-enet"
+                          "--prefix=#{prefix}"
     system "make", "gmo" if build.head?
     system "make"
     system "make", "macapp"
