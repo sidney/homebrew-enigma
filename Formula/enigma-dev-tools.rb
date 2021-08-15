@@ -1,13 +1,14 @@
 class EnigmaDevTools < Formula
   desc "Developer tools for Enigma game project"
   homepage "https://www.nongnu.org/enigma/"
-  url "https://raw.githubusercontent.com/Enigma-Game/Enigma/9cf51b87418ee16ba8a5f6bf0d95879501674add/etc/enigmabuilddmg"
-  sha256 "58fa40f271df9b18350e03352e2d2925e7615939202ef21040f3f54e7deeaa9c"
+  url "file:///dev/null"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   license "GPL-2.0-or-later"
-  version "1.30-alpha"
+  version "1.30"
 
   bottle :unneeded
   
+  depends_on "enigma"
   depends_on "dylibbundler"
   depends_on "imagemagick"
   depends_on "osxutils"
@@ -15,7 +16,11 @@ class EnigmaDevTools < Formula
   depends_on "create-dmg"
 
   def install
-    bin.install "enigmabuilddmg"
+    # The file comes from the enigma install, but it is only used for development
+    bin.mkpath
+    mkdir_p "etc"
+    cp "#{Formula["enigma"].opt_prefix}/etc/enigmabuilddmg", "etc/enigmabuilddmg"
+    bin.install "etc/enigmabuilddmg"
   end
 
   test do
