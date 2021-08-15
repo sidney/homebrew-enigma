@@ -2,7 +2,7 @@ class Enigma < Formula
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
   url "https://github.com/Enigma-Game/Enigma/releases/download/1.30-beta/Enigma-macbuild-1.30-beta-src.tar.gz"
-  sha256 "54ff439d3c2092d39074136b536d1e1b7489f5c9353a2d55cfa56ae7f1013114"
+  sha256 "7e47e682a621b1d157847afb970a8fd0ca1acaca3531ac20bf16812664dcc9f6"
   license "GPL-2.0-or-later"
 
   livecheck do
