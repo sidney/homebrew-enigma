@@ -24,7 +24,6 @@ class Enigma < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "dylibbundler" => :build
   depends_on "imagemagick" => :build
   depends_on "osxutils" => :build
   depends_on "pkg-config" => :build
@@ -49,10 +48,10 @@ class Enigma < Formula
     system "make", "install"
     system "strip", bin/"enigma"
     mkdir_p prefix/"etc"
-    (prefix/"etc").install "etc/enigmabuilddmg" 
-    (prefix/"etc").install "etc/Info.plist" 
-    (prefix/"etc").install "etc/enigma.icns" 
-    (prefix/"etc").install "etc/menu_bg.jpg" 
+    (prefix/"etc").install "etc/enigmabuilddmg"
+    (prefix/"etc").install "etc/Info.plist"
+    (prefix/"etc").install "etc/enigma.icns"
+    (prefix/"etc").install "etc/menu_bg.jpg"
   end
 
   test do

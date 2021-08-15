@@ -2,18 +2,18 @@ class EnigmaDevTools < Formula
   desc "Developer tools for Enigma game project"
   homepage "https://www.nongnu.org/enigma/"
   url "file:///dev/null"
+  version "1.30"
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   license "GPL-2.0-or-later"
-  version "1.30"
 
   bottle :unneeded
-  
-  depends_on "enigma"
+
+  depends_on "create-dmg"
   depends_on "dylibbundler"
+  depends_on "enigma"
+  depends_on "fileicon"
   depends_on "imagemagick"
   depends_on "osxutils"
-  depends_on "fileicon"
-  depends_on "create-dmg"
 
   def install
     # The file comes from the enigma install, but it is only used for development
