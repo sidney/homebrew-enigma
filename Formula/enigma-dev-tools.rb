@@ -10,11 +10,11 @@ class EnigmaDevTools < Formula
 
   depends_on "create-dmg"
   depends_on "dylibbundler"
+  depends_on "enigma-game/enigma/enigma"
   depends_on "fileicon"
   depends_on "imagemagick"
   depends_on :macos
   depends_on "osxutils"
-  depends_on "enigma-game/enigma/enigma"
 
   def install
     # The file comes from the enigma install, but it is only used for development
