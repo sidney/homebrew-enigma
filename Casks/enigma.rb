@@ -1,6 +1,6 @@
 cask "enigma" do
-  version "1.30-beta"
-  sha256 "b99b128408d7a854c8e3e9ec8472b518c8941801484e078f54b81044f4798421"
+  version "1.30"
+  sha256 "a15a17b9399da9bc5cfdb085765de448a18a372340676e8d3d3913765e147e19"
 
   url "https://github.com/Enigma-Game/Enigma/releases/download/#{version}/Enigma-#{version}.dmg",
       verified: "github.com/Enigma-Game/"
@@ -10,7 +10,7 @@ cask "enigma" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+(?:\D.*)?)$/i)
+    regex(/v?(\d+(?:\.\d+)+)$/i)
   end
 
   suite "Enigma"

@@ -15,7 +15,9 @@ class Enigma < Formula
 
   bottle do
     root_url "https://github.com/Enigma-Game/homebrew-enigma/releases/download/enigma-1.30_1"
+    sha256 big_sur:      "3e9122b5f5f5fb39f3d8083d7e97bd77e40201f4db5ded91ba520fce480dc53d"
     sha256 catalina:     "cc9af7d870ae8ac80a94febb1a0440e8382513be6dba8704356917d12ad9d38a"
+    sha256 mojave:       "22841ba05ef67b8b9e11345dc2a11e5ec36208408488639f6d46af83a0a3607d"
     sha256 x86_64_linux: "63f862b3d337058eaff45a57c388a6fd485c0e3a0307459bc10747e39b3e55c7"
   end
 
