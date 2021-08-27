@@ -1,18 +1,16 @@
 class Enigma < Formula
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
-  url "https://github.com/Enigma-Game/Enigma/releases/download/1.30-beta/Enigma-1.30-beta-macbuild-src.tar.gz"
-  version "1.30"
-  sha256 "fe0a8436b862159fbd7d17bad1684f8f1df33bdff1b801bb3f904f3dbaab509e"
+  url "https://github.com/Enigma-Game/Enigma/releases/download/1.30/Enigma-1.30-src.tar.gz"
+  sha256 "ae64b91fbc2b10970071d0d78ed5b4ede9ee3868de2e6e9569546fc58437f8af"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
     # This uses the git tag to get version numbers.
     # Stable releases should be tagged like 1.21.1 or 1.30
-    # For now let it match on 1.30-beta so we can test with it
-    # and remove the (?:\D.*)? at the end when 1.30 is released
-    regex(/v?(\d+(?:\.\d+)+)(?:\D.*)?$/i)
+    regex(/v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
