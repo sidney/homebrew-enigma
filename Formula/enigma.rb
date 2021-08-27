@@ -14,12 +14,9 @@ class Enigma < Formula
   end
 
   bottle do
-    root_url "https://github.com/Enigma-Game/homebrew-enigma/releases/download/enigma-1.30"
-    rebuild 1
-    sha256 mojave:       "7f7b01aadc387f457d205765dce3f3053a5f44452c8fe20b575d522aece01a39"
-    sha256 catalina:     "589928526ebda97b1e98478abf05a7aec365cee59c97a628b5849a998f78a51a"
-    sha256 big_sur:      "531b9fd61d2e9f61dc8a9fead2b4d14c9c2cfa00b731f85d22c86586f13cd9c6"
-    sha256 x86_64_linux: "fa0396b158558b844fc102d0bbd561250f2ab019ff985eb886404fad00791b61"
+    root_url "https://github.com/Enigma-Game/homebrew-enigma/releases/download/enigma-1.30_1"
+    sha256 catalina:     "cc9af7d870ae8ac80a94febb1a0440e8382513be6dba8704356917d12ad9d38a"
+    sha256 x86_64_linux: "63f862b3d337058eaff45a57c388a6fd485c0e3a0307459bc10747e39b3e55c7"
   end
 
   head do
