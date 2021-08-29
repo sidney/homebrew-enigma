@@ -1,27 +1,31 @@
 class EnigmaDevTools < Formula
   desc "Developer tools for Enigma game project"
   homepage "https://www.nongnu.org/enigma/"
-  url "file:///dev/null"
-  version "1.30"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  url "https://github.com/Enigma-Game/Enigma/releases/download/1.30/Enigma-1.30-src.tar.gz"
+  sha256 "ae64b91fbc2b10970071d0d78ed5b4ede9ee3868de2e6e9569546fc58437f8af"
   license "GPL-2.0-or-later"
+
+  livecheck do
+    url :stable
+    regex(/v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle :unneeded
 
   depends_on "create-dmg"
   depends_on "dylibbundler"
-  depends_on "enigma-game/enigma/enigma"
+  depends_on "enigma"
   depends_on "fileicon"
   depends_on "imagemagick"
   depends_on :macos
   depends_on "osxutils"
 
   def install
-    # The file comes from the enigma install, but it is only used for development
-    bin.mkpath
-    mkdir_p "etc"
-    cp "#{Formula["enigma"].opt_prefix}/etc/enigmabuilddmg", "etc/enigmabuilddmg"
     bin.install "etc/enigmabuilddmg"
+    mkdir_p "#{Formula["enigma"].opt_prefix}/etc"
+    ("#{Formula["enigma"].opt_prefix}/etc").install "etc/Info.plist"
+    ("#{Formula["enigma"].opt_prefix}/etc").install "etc/enigma.icns"
+    ("#{Formula["enigma"].opt_prefix}/etc").install "etc/menu_bg.jpg"
   end
 
   test do
